@@ -1,11 +1,17 @@
 package se.lexicon.util;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.Scanner;
 
 public class ScannerInputService implements UserInputService{
+   
     private final Scanner scanner;
 
-    public ScannerInputService(Scanner scanner) {
+
+
+    @Autowired
+    public ScannerInputService(Scanner scanner){
         this.scanner = scanner;
     }
 
@@ -19,3 +25,7 @@ public class ScannerInputService implements UserInputService{
         return 0;
     }
 }
+
+
+
+
